@@ -10,6 +10,8 @@ const contentOfUpdated = contentOfTag(R.__, 'lastupdated');//Função curried
 const contentOfID = contentOfTag(R.__, 'id');//Função curried
 const getGitHubProject = xmlNode => contentOfSource(xmlNode).replace('https://github.com/', '');//Função com side-effects
 
+const getNameAndDates = xmlNode => getGitHubProject(xmlNode) + ' - ' + contentOfAdded(xmlNode) + ' - ' + contentOfUpdated(xmlNode);
+
 const elementsToArray = nodes => {//Função com side-effects
     const arr = [];
     for (let i = 0; i < nodes.length; i++)
@@ -39,5 +41,6 @@ module.exports = {
     elementsToArray,
     getGitHubProject,
     contentOfSource,
-    contentOfID
+    contentOfID,
+    getNameAndDates
 };
