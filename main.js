@@ -7,11 +7,11 @@ const { isValid, elementsToArray, getGitHubProject } = require('./xmlfilter');
 // efetua o processamento do xml e armazena a estrutura no objeto 'document'
 const document = new DOMParser().parseFromString(fs.readFileSync('res/f-droid.xml', 'utf-8'));
 
-const isAddedAfter2018AndUpdatedAfter2019 = isValid(R.__, 2018, 2019);
+const isAddedAfter2018AndUpdatedAfter2019 = isValid(R.__, 2018, 2019);//Função high-order
 
 const addedApps = elementsToArray(document.getElementsByTagName('application'))
-    .filter(isAddedAfter2018AndUpdatedAfter2019)
-    .map(getGitHubProject);
+    .filter(isAddedAfter2018AndUpdatedAfter2019)//Função high-order
+    .map(getGitHubProject);//Função high-order
 
 console.log(addedApps.join('\n'));
  
