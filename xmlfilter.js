@@ -2,12 +2,12 @@ const R = require('ramda');
 
 const contentOfTag = R.curry(
     (xmlNode, tagName) => xmlNode.getElementsByTagName(tagName)[0].textContent
-);
+);//Função curried
 
-const contentOfSource = contentOfTag(R.__, 'source');
-const contentOfAdded = contentOfTag(R.__, 'added');
-const contentOfUpdated = contentOfTag(R.__, 'lastupdated');
-const contentOfID = contentOfTag(R.__, 'id');
+const contentOfSource = contentOfTag(R.__, 'source');//Função curried
+const contentOfAdded = contentOfTag(R.__, 'added');//Função curried
+const contentOfUpdated = contentOfTag(R.__, 'lastupdated');//Função curried
+const contentOfID = contentOfTag(R.__, 'id');//Função curried
 const getGitHubProject = xmlNode => contentOfSource(xmlNode).replace('https://github.com/', '');//Função com side-effects
 
 const elementsToArray = nodes => {//Função com side-effects
@@ -17,7 +17,7 @@ const elementsToArray = nodes => {//Função com side-effects
     return arr;
 };
 
-const isValid = R.curry(
+const isValid = R.curry(//Função curried
     (app, addedAfterYear, updatedAfterYear) => {
         if (!contentOfSource(app).includes('github.com'))
             return false;
