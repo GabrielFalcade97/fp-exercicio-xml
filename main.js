@@ -18,6 +18,19 @@ console.log(addedApps.join('\n'));
 // (Exercício 1) Identifique todas as declarações de funções neste projeto
     // Adicione um comentário identificando-as
 
+    // main.js
+        //isAddedAfter2018AndUpdatedAfter2019
+
+    // xmlfilter.js
+        //contentOfTag
+        //contentOfSource
+        //contentOfAdded
+        //contentOfUpdated
+        //contentOfID
+        //getGitHubProject
+        //elementsToArray
+        //isValid
+
 // (Exercício 2) Identifique quais funções no projeto possuem efeitos colaterais (side-effects)
     // Adicione um comentário identificando-as
 
