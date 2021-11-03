@@ -8,12 +8,12 @@ const contentOfSource = contentOfTag(R.__, 'source');
 const contentOfAdded = contentOfTag(R.__, 'added');
 const contentOfUpdated = contentOfTag(R.__, 'lastupdated');
 const contentOfID = contentOfTag(R.__, 'id');
-const getGitHubProject = xmlNode => contentOfSource(xmlNode).replace('https://github.com/', '');
+const getGitHubProject = xmlNode => contentOfSource(xmlNode).replace('https://github.com/', '');//Função com side-effects
 
-const elementsToArray = nodes => {
+const elementsToArray = nodes => {//Função com side-effects
     const arr = [];
     for (let i = 0; i < nodes.length; i++)
-        arr.push(nodes[i]);
+        arr.push(nodes[i]);//Função com side-effects
     return arr;
 };
 
