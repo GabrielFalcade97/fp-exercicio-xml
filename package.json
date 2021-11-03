@@ -1,0 +1,18 @@
+{
+  "name": "fp-ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ramda": "^0.27.1",
+    "xmldom": "^0.3.0"
+  }
+}
